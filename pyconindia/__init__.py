@@ -1,4 +1,4 @@
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 year = 2021
 location = "Anywhere on Earth"
