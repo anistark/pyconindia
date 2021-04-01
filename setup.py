@@ -27,10 +27,8 @@ setuptools.setup(
     url="https://github.com/anistark/pyconindia",
     packages=["pyconindia"],
     install_requires=[],
-    license="MIT",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         ],
     python_requires='>=3.6',
