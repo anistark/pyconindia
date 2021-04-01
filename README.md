@@ -6,10 +6,13 @@ PyCon India is the largest gathering of Pythonistas in India for the Python prog
 
 Install : `pip install pyconindia`
 
-Init: `import pyconindia`
+```python
+>>> import pyconindia
+>>> pyconindia.year
+2021
+>>> pyconindia.location
+'Anywhere on Earth'
+>>> pyconindia.cfp
+'Submit your proposal: https://in.pycon.org/cfp/2021/proposals/'
+```
 
-Get Active Year: `pyconindia.year`
-
-Get location of conference: `pyconindia.location`
-
-Get cfp status: `pyconindia.cfp`
