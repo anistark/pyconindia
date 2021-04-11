@@ -2,7 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/pyconindia?style=for-the-badge)](https://pypi.org/project/pyconindia/) ![PyPI - Downloads](https://img.shields.io/pypi/dw/pyconindia?style=for-the-badge) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyconindia?style=for-the-badge)
 
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/anistark/pyconindia)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/anistark/pyconindia)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/anistark/pyconindia)
 
 

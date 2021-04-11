@@ -28,8 +28,14 @@ setuptools.setup(
     packages=["pyconindia"],
     install_requires=[],
     classifiers=[
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
+        "License :: OSI Approved :: MIT License",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Utilities",
+        "Topic :: Software Development :: Libraries :: Python Modules",
         ],
     python_requires='>=3.6',
 )
