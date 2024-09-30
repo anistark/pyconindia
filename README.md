@@ -16,10 +16,9 @@ Install : `pip install pyconindia`
 ```python
 >>> import pyconindia
 >>> pyconindia.year
-2021
+2024
 >>> pyconindia.location
 'Anywhere on Earth'
 >>> pyconindia.cfp
-'Submit your proposal: https://in.pycon.org/cfp/2021/proposals/'
+'Submit your proposal: https://in.pycon.org/cfp/2024/proposals/'
 ```
-
