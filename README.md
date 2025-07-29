@@ -16,7 +16,7 @@ Install : `pip install pyconindia`
 ```python
 >>> import pyconindia
 >>> pyconindia.year
-2024
+2025
 >>> pyconindia.location
 'Anywhere on Earth'
 >>> pyconindia.cfp

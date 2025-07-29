@@ -1,5 +1,5 @@
-__version__ = "1.0.6"
+__version__ = "16.0.0"
 
-year = 2024
-location = "Anywhere on Earth"
-cfp = "Submit your proposal: https://in.pycon.org/cfp/2021/proposals/"
+year = 2025
+location = "Nimhans, Bengaluru, India"
+cfp = "Submit your proposal: https://cfp.in.pycon.org/2025/cfp"
