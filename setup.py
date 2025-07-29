@@ -26,8 +26,12 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/anistark/pyconindia",
     packages=["pyconindia"],
+    package_data={
+        "pyconindia": ["data/*.yaml"],
+    },
     install_requires=[
         "click>=8.0.0",
+        "PyYAML>=6.0",
     ],
     entry_points={
         'console_scripts': [

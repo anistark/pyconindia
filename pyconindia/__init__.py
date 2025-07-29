@@ -1,5 +1,15 @@
-__version__ = "16.1.1"
+from .conference import Conference
 
-year = 2025
-location = "Nimhans, Bengaluru, India"
-cfp = "Submit your proposal: https://cfp.in.pycon.org/2025/cfp"
+__version__ = "16.2.3"
+
+_conf = Conference()
+year = _conf.year()
+city = _conf.city()
+state = _conf.state()
+venue = _conf.venue()
+location = _conf.location()
+month = _conf.month()
+dates = _conf.dates()
+status = _conf.status()
+cfp = _conf.cfp()
+website = _conf.website()
