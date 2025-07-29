@@ -26,9 +26,18 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/anistark/pyconindia",
     packages=["pyconindia"],
-    install_requires=[],
+    install_requires=[
+        "click>=8.0.0",
+    ],
+    entry_points={
+        'console_scripts': [
+            'pyconindia=pyconindia.cli:cli',
+            'pycon=pyconindia.cli:cli',
+        ],
+    },
     classifiers=[
         "Environment :: Web Environment",
+        "Environment :: Console",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
@@ -36,6 +45,7 @@ setuptools.setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Utilities",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
+        "Topic :: System :: Shells",
+    ],
     python_requires='>=3.6',
 )
