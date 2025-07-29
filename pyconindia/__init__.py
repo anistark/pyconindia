@@ -1,6 +1,6 @@
 from .conference import Conference
 
-__version__ = "16.2.4"
+__version__ = "16.2.5"
 
 _conf = Conference()
 year = _conf.year()
