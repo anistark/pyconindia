@@ -15,7 +15,7 @@ The `pyconindia` package works both as a **Python library** and a **command-line
 
 ### Install from PyPI (Recommended)
 
-```bash
+```sh
 pip install pyconindia
 ```
 
@@ -23,7 +23,7 @@ pip install pyconindia
 
 For system-wide installation that makes the CLI available to all users:
 
-```bash
+```sh
 # Using pip (recommended)
 pip install --user pyconindia
 
@@ -38,7 +38,7 @@ pipx install pyconindia
 
 ### Install pipx (if not already installed)
 
-```bash
+```sh
 # On macOS
 brew install pipx
 
@@ -78,7 +78,7 @@ After installation, you can use the CLI commands globally:
 
 #### Basic Usage
 
-```bash
+```sh
 # Show basic conference information
 pyconindia
 
@@ -98,7 +98,7 @@ Use --help to see all available commands.
 
 #### Available Commands
 
-```bash
+```sh
 # Get detailed conference information
 pyconindia info
 pyconindia info --year 2024        # For specific year
@@ -126,7 +126,7 @@ pyconindia --help
 
 All commands support JSON output for integration with other tools:
 
-```bash
+```sh
 # JSON output
 pyconindia --json
 pyconindia info --json
@@ -145,7 +145,7 @@ Example JSON output:
 
 #### Enhanced Commands
 
-```bash
+```sh
 # Show PyCon India history
 pyconindia history
 pyconindia history --start-year 2020 --end-year 2025
@@ -159,7 +159,7 @@ pyconindia website --browser        # Opens in default browser
 
 For convenience, you can use either command name:
 
-```bash
+```sh
 pyconindia info    # Full name
 pycon info         # Short alias
 ```
@@ -168,7 +168,7 @@ pycon info         # Short alias
 
 ### Local Development Setup
 
-```bash
+```sh
 # Clone the repository
 git clone https://github.com/anistark/pyconindia.git
 cd pyconindia
@@ -182,7 +182,7 @@ pyconindia --help
 
 ### Testing
 
-```bash
+```sh
 python test.py
 ```
 

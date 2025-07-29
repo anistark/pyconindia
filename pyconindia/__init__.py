@@ -1,6 +1,6 @@
 from .conference import Conference
 
-__version__ = "16.2.3"
+__version__ = "16.2.4"
 
 _conf = Conference()
 year = _conf.year()
@@ -12,4 +12,6 @@ month = _conf.month()
 dates = _conf.dates()
 status = _conf.status()
 cfp = _conf.cfp()
+tickets = _conf.tickets()
+schedule = _conf.schedule()
 website = _conf.website()

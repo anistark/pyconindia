@@ -8,6 +8,8 @@
     end: 27
   cfp_url: null
   website: "https://in.pycon.org/2009/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2009/displayschedule/"
 
 2010:
   city: "Bengaluru"
@@ -19,28 +21,34 @@
     end: 26
   cfp_url: null
   website: "https://in.pycon.org/2010/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2010/schedule/"
 
 2011:
-  city: "Mumbai"
+  city: "Pune"
   state: "Maharashtra"
-  venue: "IIT Bombay"
+  venue: "Symbiosis Vishwabhavan, S.B. Road"
   month: "September"
   date:
     start: 16
     end: 18
   cfp_url: null
   website: "https://in.pycon.org/2011/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2011/schedule/"
 
 2012:
-  city: "Gandhinagar"
-  state: "Gujarat"
-  venue: "Dhirubhai Ambani Institute"
+  city: "Karnataka"
+  state: "Bengaluru"
+  venue: "Christ University Campus"
   month: "September"
   date:
     start: 28
     end: 30
   cfp_url: null
   website: "https://in.pycon.org/2012/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2012/"
 
 2013:
   city: "Bengaluru"
@@ -49,9 +57,11 @@
   month: "August"
   date:
     start: 30
-    end: 1  # September 1
+    end: 31
   cfp_url: null
   website: "https://in.pycon.org/2013/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2013/#workshops"
 
 2014:
   city: "Bengaluru"
@@ -63,6 +73,8 @@
     end: 28
   cfp_url: null
   website: "https://in.pycon.org/2014/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2014/schedule.html"
 
 2015:
   city: "Bengaluru"
@@ -74,6 +86,8 @@
     end: 5
   cfp_url: null
   website: "https://in.pycon.org/2015/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2015/#schedule"
 
 2016:
   city: "New Delhi"
@@ -85,17 +99,21 @@
     end: 25
   cfp_url: null
   website: "https://in.pycon.org/2016/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2016/#schedule"
 
 2017:
   city: "New Delhi"
   state: "Delhi"
-  venue: "Jawaharlal Nehru University"
+  venue: "Shaheed Sukhdev College Of Business Studies"
   month: "November"
   date:
     start: 2
     end: 5
   cfp_url: null
   website: "https://in.pycon.org/2017/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2017/#schedule"
 
 2018:
   city: "Hyderabad"
@@ -107,6 +125,8 @@
     end: 9
   cfp_url: null
   website: "https://in.pycon.org/2018/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2018/#schedule"
 
 2019:
   city: "Chennai"
@@ -118,6 +138,8 @@
     end: 15
   cfp_url: null
   website: "https://in.pycon.org/2019/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2019/"
 
 2020:
   city: "Online"
@@ -129,6 +151,8 @@
     end: 5
   cfp_url: null
   website: "https://in.pycon.org/2020/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2020/#schedule"
 
 2021:
   city: "Online"
@@ -140,17 +164,8 @@
     end: 20
   cfp_url: null
   website: "https://in.pycon.org/2021/"
-
-2022:
-  city: "Online"
-  state: null
-  venue: "Virtual Conference"
-  month: "September"
-  date:
-    start: 2
-    end: 5
-  cfp_url: null
-  website: "https://in.pycon.org/2022/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2021/schedule/"
 
 2023:
   city: "Hyderabad"
@@ -159,9 +174,11 @@
   month: "September"
   date:
     start: 29
-    end: 2  # October 2
+    end: 30
   cfp_url: "https://cfp.in.pycon.org/2023/cfp/"
   website: "https://in.pycon.org/2023/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2023/schedule/"
 
 2024:
   city: "Bengaluru"
@@ -171,8 +188,10 @@
   date:
     start: 20
     end: 23
-  cfp_url: "https://in.pycon.org/cfp/2024/proposals/"
+  cfp_url: "https://cfp.in.pycon.org/2024/cfp/"
   website: "https://in.pycon.org/2024/"
+  tickets: "sold_out"
+  schedule_url: "https://in.pycon.org/2024/schedule/"
 
 2025:
   city: "Bengaluru"
@@ -184,3 +203,5 @@
     end: 15
   cfp_url: "https://cfp.in.pycon.org/2025/cfp/"
   website: "https://in.pycon.org/2025/"
+  tickets: "available"
+  schedule_url: null

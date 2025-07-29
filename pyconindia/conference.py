@@ -141,6 +141,20 @@ class Conference:
         conf_data = self._data.get(year, {})
         return conf_data.get('website', f'https://in.pycon.org/{year}/')
 
+    def tickets(self, year=None):
+        year = year or self.year()
+        conf_data = self._data.get(year, {})
+        return conf_data.get('tickets', 'TBA')
+
+    def schedule(self, year=None):
+        year = year or self.year()
+        conf_data = self._data.get(year, {})
+        schedule_url = conf_data.get('schedule_url')
+        
+        if schedule_url:
+            return f"View schedule: {schedule_url}"
+        return "Schedule not prepared yet"
+
     def get_all_years(self):
         return sorted(self._data.keys())
 
@@ -162,6 +176,8 @@ class Conference:
                     'dates': 'TBA',
                     'status': 'not_planned',
                     'cfp': 'Not Planned Yet! Want to organise? Reach out to mailing list "https://mail.python.org/mailman3/lists/inpycon.python.org/"',
+                    'tickets': 'Not Planned Yet! Want to organise? Reach out to mailing list "https://mail.python.org/mailman3/lists/inpycon.python.org/"',
+                    'schedule': 'Not Planned Yet! Want to organise? Reach out to mailing list "https://mail.python.org/mailman3/lists/inpycon.python.org/"',
                     'website': f'https://in.pycon.org/{year}/'
                 }
             else:
@@ -176,6 +192,8 @@ class Conference:
                     'dates': 'Pre-historic times when PyCon India did not exist',
                     'status': 'prehistoric',
                     'cfp': 'Pre-historic times when PyCon India did not exist',
+                    'tickets': 'Pre-historic times when PyCon India did not exist',
+                    'schedule': 'Pre-historic times when PyCon India did not exist',
                     'website': f'https://in.pycon.org/{year}/'
                 }
         
@@ -189,5 +207,7 @@ class Conference:
             'dates': self.dates(year),
             'status': self.status(year),
             'cfp': self.cfp(year),
+            'tickets': self.tickets(year),
+            'schedule': self.schedule(year),
             'website': self.website(year)
         }

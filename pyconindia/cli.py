@@ -44,9 +44,41 @@ def cli(ctx, output_json):
                 click.echo(f"🏢 Venue: {info['venue']}")
                 click.echo(f"📍 Location: {info['location']}")
                 click.echo(f"📅 Dates: {info['dates']}")
+                click.echo(f"🎫 Tickets: {info['tickets'].title()}")
                 click.echo(f"📝 CFP: {info['cfp']}")
+                click.echo(f"📋 Schedule: {info['schedule']}")
             
             click.echo("\nUse --help to see available commands.")
+
+
+@cli.command()
+@click.option('--year', '-y', type=int, help='Specific year to query')
+@click.pass_context
+def tickets(ctx, year):
+    """Get ticket availability"""
+    conf = Conference()
+    result = conf.tickets(year)
+    
+    if ctx.obj['json']:
+        click.echo(json.dumps({"tickets": result}))
+    else:
+        ticket_emoji = {"available": "🎫", "sold_out": "🚫"}
+        emoji = ticket_emoji.get(result, "🎫")
+        click.echo(f"{emoji} {result.replace('_', ' ').title()}")
+
+
+@cli.command()
+@click.option('--year', '-y', type=int, help='Specific year to query')
+@click.pass_context
+def schedule(ctx, year):
+    """Get conference schedule"""
+    conf = Conference()
+    result = conf.schedule(year)
+    
+    if ctx.obj['json']:
+        click.echo(json.dumps({"schedule": result}))
+    else:
+        click.echo(f"📋 {result}")
 
 
 @cli.command()
@@ -102,7 +134,9 @@ def info(ctx, year):
             click.echo(f"🏢 Venue: {data['venue']}")
             click.echo(f"📍 Location: {data['location']}")
             click.echo(f"📅 Dates: {data['dates']}")
+            click.echo(f"🎫 Tickets: {data['tickets'].title()}")
             click.echo(f"📝 CFP: {data['cfp']}")
+            click.echo(f"📋 Schedule: {data['schedule']}")
             click.echo(f"🌐 Website: {data['website']}")
 
 
