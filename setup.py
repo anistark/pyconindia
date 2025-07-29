@@ -32,7 +32,7 @@ setuptools.setup(
     entry_points={
         'console_scripts': [
             'pyconindia=pyconindia.cli:cli',
-            'pycon=pyconindia.cli:cli',
+            'inpycon=pyconindia.cli:cli',
         ],
     },
     classifiers=[
