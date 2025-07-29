@@ -58,18 +58,30 @@ python -m pipx ensurepath
 >>> import pyconindia
 >>> pyconindia.year
 2025
+>>> pyconindia.city
+'Bengaluru'
+>>> pyconindia.venue
+'NIMHANS Convention Centre'
 >>> pyconindia.location
-'Nimhans, Bengaluru, India'
+'NIMHANS Convention Centre, Bengaluru, Karnataka, India'
+>>> pyconindia.status
+'upcoming'
+>>> pyconindia.tickets
+'available'
 >>> pyconindia.cfp
-'Submit your proposal: https://cfp.in.pycon.org/2025/cfp'
+'Submit your proposal: https://cfp.in.pycon.org/2025/cfp/'
 
 # Using the Conference class
 >>> from pyconindia.conference import Conference
 >>> conf = Conference()
 >>> conf.year()
 2025
->>> conf.location(2024)
-'Anywhere on Earth'
+>>> conf.status(2023)
+'over'
+>>> conf.tickets(2023)
+'sold_out'
+>>> conf.schedule(2023)
+'View schedule: https://in.pycon.org/2023/schedule/'
 ```
 
 ### As a Command Line Tool
@@ -82,16 +94,20 @@ After installation, you can use the CLI commands globally:
 # Show basic conference information
 pyconindia
 
-# Or use the shorter alias (not too short I guess 😅)
+# Or use the shorter alias
 inpycon
 ```
 
 Output:
 ```
 🐍 Welcome to PyCon India CLI!
-📅 Year: 2025
-📍 Location: Nimhans, Bengaluru, India
-📝 CFP: Submit your proposal: https://cfp.in.pycon.org/2025/cfp
+⏳ Status: Upcoming
+🏢 Venue: NIMHANS Convention Centre
+📍 Location: NIMHANS Convention Centre, Bengaluru, Karnataka, India
+📅 Dates: September 2025 (TBA)
+🎫 Tickets: Available
+📝 CFP: Submit your proposal: https://cfp.in.pycon.org/2025/cfp/
+📋 Schedule: Schedule not prepared yet
 
 Use --help to see all available commands.
 ```
@@ -102,15 +118,40 @@ Use --help to see all available commands.
 # Get detailed conference information
 pyconindia info
 pyconindia info --year 2024        # For specific year
-pyconindia info -y 2024            # Short form
+pyconindia info -y 2024             # Short form
 
-# Get conference location
+# Get conference components
+pyconindia city
+pyconindia city --year 2024
+
+pyconindia state
+pyconindia state --year 2024
+
+pyconindia venue
+pyconindia venue --year 2024
+
 pyconindia location
 pyconindia location --year 2024
+
+pyconindia month
+pyconindia dates
+pyconindia dates --year 2024
+
+# Check conference status
+pyconindia status
+pyconindia status --year 2024
 
 # Get Call for Proposals information
 pyconindia cfp
 pyconindia cfp --year 2024
+
+# Check ticket availability
+pyconindia tickets
+pyconindia tickets --year 2024
+
+# Get conference schedule
+pyconindia schedule
+pyconindia schedule --year 2024
 
 # Get current year
 pyconindia year
@@ -137,9 +178,17 @@ Example JSON output:
 ```json
 {
   "year": 2025,
-  "location": "Nimhans, Bengaluru, India",
-  "cfp": "Submit your proposal: https://cfp.in.pycon.org/2025/cfp",
-  "version": "16.0.0"
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "venue": "NIMHANS Convention Centre",
+  "location": "NIMHANS Convention Centre, Bengaluru, Karnataka, India",
+  "month": "September",
+  "dates": "September 2025 (TBA)",
+  "status": "upcoming",
+  "cfp": "Submit your proposal: https://cfp.in.pycon.org/2025/cfp/",
+  "tickets": "available",
+  "schedule": "Schedule not prepared yet",
+  "website": "https://in.pycon.org/2025/"
 }
 ```
 
@@ -152,7 +201,54 @@ pyconindia history --start-year 2020 --end-year 2025
 
 # Open PyCon India website
 pyconindia website
-pyconindia website --browser        # Opens in default browser
+pyconindia open-website --browser        # Opens in default browser
+
+# Check specific year examples
+pyconindia info --year 2023             # Past conference
+pyconindia info --year 2026             # Future (not planned)
+pyconindia info --year 2005             # Pre-historic times
+```
+
+Example outputs for different scenarios:
+
+**Past Conference (2023):**
+```sh
+pyconindia info --year 2023
+```
+```
+🐍 PyCon India 2023
+✅ Status: Over
+🏢 Venue: Hyderabad International Convention Centre
+📍 Location: Hyderabad International Convention Centre, Hyderabad, Telangana, India
+📅 Dates: September 29-2, 2023
+🎫 Tickets: Sold Out
+📝 CFP: Submit your proposal: https://cfp.in.pycon.org/2023/cfp/
+📋 Schedule: View schedule: https://in.pycon.org/2023/schedule/
+🌐 Website: https://in.pycon.org/2023/
+```
+
+**Future Conference (2026):**
+```sh
+pyconindia info --year 2026
+```
+```
+🐍 PyCon India 2026
+🚀 Status: Not Planned
+📍 Not Planned Yet! Want to organise? Reach out to mailing list "https://mail.python.org/mailman3/lists/inpycon.python.org/"
+📝 Not Planned Yet! Want to organise? Reach out to mailing list "https://mail.python.org/mailman3/lists/inpycon.python.org/"
+🌐 Website: https://in.pycon.org/2026/
+```
+
+**Pre-historic Times (2005):**
+```sh
+pyconindia info --year 2005
+```
+```
+🐍 PyCon India 2005
+🦕 Status: Prehistoric
+📍 Pre-historic times when PyCon India did not exist
+📝 Pre-historic times when PyCon India did not exist
+🌐 Website: https://in.pycon.org/2005/
 ```
 
 #### Command Aliases
@@ -161,7 +257,7 @@ For convenience, you can use either command name:
 
 ```sh
 pyconindia info    # Full name
-pycon info         # Short alias
+inpycon info       # Short alias
 ```
 
 ## Development
@@ -203,6 +299,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Zulip Chat**: [Join our community](https://pyconindia.zulipchat.com/#narrow/stream/282100-2021.2Fpyconindia-team)
 - **Twitter**: [@pyconindia](https://twitter.com/pyconindia)
 
+## Support
+
+If you encounter any issues or have questions, please:
+
+1. Check the [GitHub Issues](https://github.com/anistark/pyconindia/issues)
+2. Join our [Zulip community](https://pyconindia.zulipchat.com)
+3. Follow us on [Twitter](https://twitter.com/pyconindia)
+
 ---
 
-Made with 💙 for PyCon India
+Made with ❤️ by the PyCon India Team
