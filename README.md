@@ -309,4 +309,4 @@ If you encounter any issues or have questions, please:
 
 ---
 
-Made with ❤️ by the PyCon India Team
+Made with ❤️ for the PyCon India Team
